@@ -1,40 +1,51 @@
-# H4CKSEC
-H4CKSEC is a personal AI-powered assistant for penetration testing and bug bounty automation. Built with GPT-4o and integrated into Kali Linux, it acts as a technical consultant capable of answering, suggesting and even executing commands securely through the terminal.
+# 🛡️ H4CKSEC – Sua assistente de Pentest & Bug Bounty com GPT-4o
 
+H4CKSEC é uma consultora virtual inteligente, integrada ao Kali Linux e alimentada pela API do GPT-4o.  
+Ela atua como sua **secretária técnica** para auxiliar em testes de invasão, bug bounty e automações ofensivas.
 
-# 🛡️ H4CKSEC – Sua assistente pessoal de Pentest & Bug Bounty
-
-H4CKSEC é uma consultora virtual alimentada pela API do GPT-4o, integrada ao Kali Linux, projetada para te auxiliar em tarefas ofensivas de cibersegurança.  
-Ela responde perguntas técnicas, sugere comandos, ajuda a construir payloads e **executa ferramentas diretamente no terminal**, com segurança e sob sua aprovação.
-
-> 🤖 Pense nela como uma secretária hacker: rápida, técnica e fiel ao código.
+> 🧠 Converse, peça ajuda e até execute comandos diretamente pelo terminal, com total controle e segurança.
 
 ---
 
 ## 🚀 Funcionalidades
 
-- ✅ Integração com GPT-4o (OpenAI)
-- ✅ Chat interativo no terminal
-- ✅ Execução de comandos sugeridos (com confirmação)
-- ✅ Personalidade técnica voltada para pentest e bug bounty
-- ✅ Pronta para integração com ferramentas como Burp, Nmap, ffuf, dirsearch, etc.
+- 🤖 Chat interativo com GPT-4o via terminal
+- 🔐 Execução de comandos no Kali (com confirmação)
+- 🧠 Consultoria em exploração de vulnerabilidades (XSS, SQLi, IDOR, etc.)
+- 💣 Sugestões de payloads, ferramentas e estratégias
+- ⚙️ Preparada para integração com Nmap, Burp, ffuf, dirsearch, etc.
 
 ---
 
-## 🧰 Requisitos
+## 📦 Requisitos
 
-- Python 3.10+
-- Conta OpenAI com API Key válida
-- Kali Linux (ou qualquer distro com ferramentas de pentest)
-- Biblioteca `openai` instalada (`pip install openai`)
+- Python 3.10+  
+- Conta OpenAI com chave de API (com acesso ao modelo `gpt-4o`)
+- Kali Linux (ou outra distro com terminal compatível)
+- Biblioteca [`openai`](https://pypi.org/project/openai/)
 
 ---
 
-## 🛠️ Instalação
+## 🔧 Como configurar e usar o ambiente virtual (Kali Linux)
+
+O Kali possui restrições (`externally-managed-environment`) que impedem o uso do `pip` global.  
+Por isso, é **obrigatório usar um ambiente virtual (venv)** para isolar o projeto.
+
+### 📌 Passo a passo:
 
 ```bash
+# 1. Clone o repositório
 git clone https://github.com/Mr-Gleidson/H4CKSEC.git
 cd H4CKSEC
+
+# 2. Crie o ambiente virtual
 python3 -m venv venv
+
+# 3. Ative o ambiente
 source venv/bin/activate
+
+# 4. Instale a biblioteca openai
 pip install openai
+
+# 5. Execute o assistente
+python3 h4cksec.py
