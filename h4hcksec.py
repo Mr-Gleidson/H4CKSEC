@@ -4,7 +4,7 @@ from openai import OpenAI
 
 # Sua chave
 client = OpenAI(
-    api_key="sk-proj-sua-chave-aqui"
+    api_key="COLOQUE AQUI SUA API KEY"
 )
 
 print("🔐 H4CKSEC pronta para te ajudar com Pentest & BugBounty!\nDigite 'exit' para sair.\n")
